@@ -1,0 +1,28 @@
+ <p id="notice"><%= notice %></p>
+
+<h1 class="rest_text"><strong>All Restaurants</strong></h1>
+
+<div class="main_list">
+    <% @restaurants.each do |restaurant| %>
+        <div class="indiv_restaurant">
+            <strong>Name: </strong></br>
+            <p><%= restaurant.name %><br>
+           <strong>Address:</strong><br>
+            <%= restaurant.address %><br>
+            <strong>Cost:</strong>
+            <%= restaurant.cost.titleize %><br>
+            <strong>Vegetarian Friendly?</strong>
+            <%= restaurant.vegetarian.to_s %><br>
+            <% if $veg == 'maxd924@gmail.com' %>
+                <%= link_to 'Show', restaurant %>           
+                <%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+        </p>
+        </div>
+    <% end %>
+
+</div>
+    
+
+
+<p class="rest_text"><%= link_to 'Add a new restaurant', new_restaurant_path %></p>

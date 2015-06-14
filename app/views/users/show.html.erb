@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<!-- <p>
+  <strong>Crypted password:</strong>
+  <%#= @user.crypted_password %>
+</p>
+
+<p>
+  <strong>Salt:</strong>
+  <%#= @user.salt %>
+</p> -->
+
+<p>
+	<strong>Vegetarian?</strong>
+	<%= @user.vegetarian %>
+</p>
+
+<% if $veg == 'maxd924@gmail.com' %>
+	<%= link_to 'Edit', edit_user_path(@user) %> 
+<% end %>
+<%= link_to 'Taco Places', :restaurants %>

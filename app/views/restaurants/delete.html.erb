@@ -1,0 +1,30 @@
+
+ <p id="notice"><%= notice %></p>
+
+<h1 class="rest_text"><strong>All Restaurants</strong></h1>
+
+<div class="main_list">
+
+    <% #@restaurant = Restaurant.where(vegetarian: 'No') %>
+    <% @restaurants.each do |restaurant| %>
+        <div class="indiv_restaurant">
+            <strong>Name: </strong></br>
+            <p><%= restaurant.name %><br>
+           <strong>Address:</strong><br>
+            <%= restaurant.address %><br>
+            <strong>Spice Level:</strong><br>
+            <%= restaurant.spicy %><br>
+            <strong>Cost:</strong>
+            <%= restaurant.cost.titleize %><br>
+            <strong>Vegetarian Friendly?</strong>
+            <%= restaurant.vegetarian.to_s %><br>
+            <%= link_to 'Show', restaurant %></p>
+            <%= link_to 'Delete', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+        </div>
+    <% end %>
+
+</div>
+    
+
+
+<p class="rest_text"><%= link_to 'Add a new restaurant', new_restaurant_path %></p>
