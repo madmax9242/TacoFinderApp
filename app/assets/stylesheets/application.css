@@ -92,6 +92,11 @@ color: #737373;
         padding-bottom:10px;
     }
 
+/* Pulling CSS from other useless files putting relative ones in here   */
+#notice {
+  color: green;
+}
+
  /*================================
   BUTTON STYLES
 ==================================*/

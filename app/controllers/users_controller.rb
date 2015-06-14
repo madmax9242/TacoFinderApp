@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   skip_before_filter :require_login, only: [:index, :new, :create ]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /users
   # GET /users.json
@@ -20,6 +21,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @users = User.all
   end
 
   # POST /users
@@ -29,12 +31,11 @@ class UsersController < ApplicationController
 
     #respond_to do |format|
       if @user.save
-        $veg = @user.vegetarian
+        $rabbit = @user.vegetarian
         auto_login(@user)
         redirect_to(@user, notice: 'User was successfully created')
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render :new 
       end
     #end
   end
@@ -62,6 +63,7 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

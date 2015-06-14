@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(version: 20150612214827) do
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "spicy"
     t.string   "vegetarian"
-    t.boolean  "admin"
+    t.boolean  "admin",            default: false
   end
 
 end

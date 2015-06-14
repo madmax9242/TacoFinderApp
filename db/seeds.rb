@@ -16,7 +16,7 @@ Restaurant.create(name: 'El Azteca', address: '2600 E 7th St,', spicy: 7, cost: 
 
 # Taqueria Mi Trailita
 
-User.create(:email => 'maxd924@gmail.com', :admin => true )
+User.create(:email => 'admin@gmail.com', :crypted_password => 'guest', :admin => true )
 # 5301 Manor Rd
 # Austin, TX 78723
 # (512) 497-9877

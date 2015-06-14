@@ -7,26 +7,20 @@
 
 <!-- <p>
   <strong>Crypted password:</strong>
-  <%= @user.crypted_password %>
+  <%#= @user.crypted_password %>
 </p>
 
 <p>
   <strong>Salt:</strong>
-  <%= @user.salt %>
+  <%#= @user.salt %>
 </p> -->
 
 <p>
-	<strong>Spiciness Preference</strong>
-	<%= @user.spicy %>
-</p>
-<p>
 	<strong>Vegetarian?</strong>
-	<% if @user.vegetarian == 'vegetarian' %>
-		Yes
-	<% else %>
-		No
-	<% end %>
+	<%= @user.vegetarian %>
 </p>
 
-<%#= link_to 'Edit', edit_user_path(@user) %> 
+<% if $veg == 'maxd924@gmail.com' %>
+	<%= link_to 'Edit', edit_user_path(@user) %> 
+<% end %>
 <%= link_to 'Taco Places', :restaurants %>

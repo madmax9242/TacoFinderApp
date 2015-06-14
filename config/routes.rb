@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   root :to => 'restaurants#index'
   resources :user_sessions
 
+  # Sets the login/logout routes
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
