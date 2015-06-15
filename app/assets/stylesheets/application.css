@@ -87,6 +87,10 @@ h2 {
     font-size: 2.5em;
 }
 
+h3  {
+  text-align: center;
+}
+
 /* Pulling CSS from other useless files putting relative ones in here   */
 #notice {
   color: green;
