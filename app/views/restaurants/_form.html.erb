@@ -10,41 +10,47 @@
       </ul>
     </div>
   <% end %>
+  <div class="form">
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :address %><br>
+      <%= f.text_field :address %>
+    </div>
 
-<!-- Spiciness
-  <div class="field">
-    <%#= f.select :spicy do %>
-      <% #[[1, 1], [2, 2], [3, 3], [4, 4], [5, 5], [6, 6], [7, 7], [8, 8], [9, 9], [10, 10]].each do |c| %>
-        <%#= content_tag(:option, c.first, value: c.last) %>
+  <!-- Spiciness
+    <div class="field">
+      <%#= f.select :spicy do %>
+        <% #[[1, 1], [2, 2], [3, 3], [4, 4], [5, 5], [6, 6], [7, 7], [8, 8], [9, 9], [10, 10]].each do |c| %>
+          <%#= content_tag(:option, c.first, value: c.last) %>
+        <% #end %>
       <% #end %>
-    <% #end %>
-  </div><br> -->
-  Pricing
-    <div class="field">
-    <%= f.select :cost do %>
-      <%= [['Cheap', 'cheap'], ['Average', 'average'], ['Expensive', 'expensive']].each do |v| %>
-        <%= content_tag(:option, v.first, value: v.last) %>
+    </div><br> -->
+    
+    Pricing
+      <div class="field">
+      <%= f.select :cost do %>
+        <%= [['Cheap', 'cheap'], ['Average', 'average'], ['Expensive', 'expensive']].each do |v| %>
+          <%= content_tag(:option, v.first, value: v.last) %>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-  Vegetarian friendly?
-    <div class="field">
-    <%= f.select :vegetarian do %>
-      <%= [['Yes', 'Yes'], ['No', 'No']].each do |v| %>
-        <%= content_tag(:option, v.first, value: v.last) %>
+    </div>
+
+    Vegetarian friendly?
+      <div class="field">
+      <%= f.select :vegetarian do %>
+        <%= [['Yes', 'Yes'], ['No', 'No']].each do |v| %>
+          <%= content_tag(:option, v.first, value: v.last) %>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
   </div>
 <% end %>

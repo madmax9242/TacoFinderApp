@@ -7,7 +7,6 @@ class UserSessionsController < ApplicationController
   def create
     if @user = login(params[:email], params[:password])
       $veg = @user.email
-      $rabbit = @user.vegetarian
       redirect_back_or_to('/user', notice: 'Login successful')
     else
       flash.now[:alert] = 'Login failed'
