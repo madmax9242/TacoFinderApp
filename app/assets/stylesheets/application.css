@@ -33,7 +33,7 @@
     GOOGLE FONT
 ==================================*/
 
-@import url(http://fonts.googleapis.com/css?family=Anton|Maven+Pro:500,700); /* FREE GOOGLE FONTS */
+@import { url(http://fonts.googleapis.com/css?family=Anton|Maven+Pro:500,700)}; /* FREE GOOGLE FONTS */
 
 /*================================
   GENERAL STYLES
@@ -57,10 +57,24 @@
   border: 1px solid black;
 }
 
+a {
+  color: #000;
+  }
+a:visited {
+    color: #666;
+  }
+a:hover {
+    color: #fff;
+    background-color: #000;
+  }
+
+
 body {
-   font-family: 'Maven Pro', sans-serif;
-    line-height: 30px;
-    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    line-height: 2em;
+    font-size: 1em;
 }
 
 section {
@@ -95,6 +109,55 @@ color: #737373;
 /* Pulling CSS from other useless files putting relative ones in here   */
 #notice {
   color: green;
+}
+
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+div .field{
+  margin-bottom: 10px;
+}
+div .action {
+  margin-bottom: 10px;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
 }
 
  /*================================
