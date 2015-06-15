@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  get '/path/from/public/favicon.ico'
+  #get '/path/from/public/favicon'
   # Example resource route with options:
   #   resources :products do
   #     member do
