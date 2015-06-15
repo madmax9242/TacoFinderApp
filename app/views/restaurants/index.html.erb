@@ -1,6 +1,8 @@
- <p id="notice"><%= notice %></p>
+ <p id="notice"><h1><%= notice %></h1></p>
 
-<h1 class="rest_text"><strong>All Restaurants</strong></h1>
+<div>
+    <h1 class="rest_text"><strong>All Restaurants</strong></h1>
+</div>
 
 <div class="main_list">
     <% @restaurants.each do |restaurant| %>
@@ -25,4 +27,5 @@
     
 
 
-<p class="rest_text"><%= link_to 'Add a new restaurant', new_restaurant_path %></p>
+<h1><p class="rest_text"><%= link_to 'Add a new restaurant', new_restaurant_path %></p></h1>
+<h1><p class="rest_text"><%= link_to 'Google Maps', :google_maps %></p></h1>
