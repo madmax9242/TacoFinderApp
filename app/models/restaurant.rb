@@ -4,4 +4,5 @@ class Restaurant < ActiveRecord::Base
 	# has_many :customers
 	has_many :users
 
+
 end
