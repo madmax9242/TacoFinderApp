@@ -1,4 +1,5 @@
- <%= form_for(@restaurant) do |f| %>
+ <%= form_for(@restaurant, :html => {:class => "formDiv"}) do |f| %>
+ 
   <% if @restaurant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
@@ -20,11 +21,6 @@
       <%= f.label :address %><br>
       <%= f.text_field :address %>
     </div>
-
-<!--     Google Address
-    <div class="field">
-      <%#= f.text_field :google_address %>
-    </div><br> -->
     
     Pricing
       <div class="field">

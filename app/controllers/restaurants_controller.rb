@@ -8,7 +8,6 @@ class RestaurantsController < ApplicationController
 	#Show data for one restaurant
 	def show
 		@restaurant = Restaurant.find(params[:id])
-		$end_point = @restaurant.address
 	end
 
 	# Displays form for creating a new restaurant
@@ -20,7 +19,7 @@ class RestaurantsController < ApplicationController
 	def create
 	    @restaurant = Restaurant.new(restaurant_params)
 
-	    respond_to do |format|
+	    #respond_to do |format|
 	      if @restaurant.save
 			redirect_to @restaurant, notice: 'Restaurant was successfully created.' 
 	        #format.json { render :show, status: :created, location: @restaurant }
@@ -28,7 +27,7 @@ class RestaurantsController < ApplicationController
 	        render :new 
 	        #format.json { render json: @restaurant.errors, status: :unprocessable_entity }
 	      end
-	    end
+	    #end
 	end
 
 	# Displays form for editing an existing restaurant
@@ -38,7 +37,7 @@ class RestaurantsController < ApplicationController
 
 	# Processes data from the edit restaurant from and updates the restaurant
 	def update
-	    respond_to do |format|
+	    #respond_to do |format|
 	      if @restaurant.update(restaurant_params)
 	        redirect_to @restaurant, notice: 'restaurant was successfully updated.'
 	        #format.json { render :show, status: :ok, location: @restaurant }
@@ -46,7 +45,7 @@ class RestaurantsController < ApplicationController
 	        render :edit 
 	        #format.json { render json: @restaurant.errors, status: :unprocessable_entity }
 	      end
-	    end
+	    # end
 	end
 
 	# Deletes the restaurant
