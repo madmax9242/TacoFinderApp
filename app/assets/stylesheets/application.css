@@ -163,5 +163,17 @@ width:100%;
 margin-top:20px;
 }
  
+#password_info  {
+  font-size: .3em;
+  color: red;
+}
 
+.formDiv  {
+  max-width: 20%;
+  background-color: lightblue;
+  margin: 0 auto;
+}
+
+#formId  {
+  color: pink;
 }

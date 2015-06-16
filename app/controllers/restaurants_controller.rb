@@ -8,6 +8,7 @@ class RestaurantsController < ApplicationController
 	#Show data for one restaurant
 	def show
 		@restaurant = Restaurant.find(params[:id])
+		$end_point = @restaurant.address
 	end
 
 	# Displays form for creating a new restaurant
