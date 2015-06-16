@@ -7,34 +7,65 @@
     <style>
       html, body, #map-canvas {
         height: 100%;
-        margin: 0px;
+        width: 100%;
+        margin: 0 auto;
         padding: 0px
       }
+      #map_box  {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
     </style>
-    <script>
-      function initialize() {
-        var mapOptions = {
-          zoom: 8,
-          center: new google.maps.LatLng(-34.397, 150.644)
-        };
+    // <script>
+    //   function initialize() {
+    //     var mapOptions = {
+    //       zoom: 8,
+    //       center: new google.maps.LatLng(-34.397, 150.644)
+    //     };
 
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-      }
+    //     var map = new google.maps.Map(document.getElementById('map-canvas'),
+    //         mapOptions);
+    //   }
 
-      function loadScript() {
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-            '&signed_in=true&callback=initialize';
-        document.body.appendChild(script);
-      }
+    //   function loadScript() {
+    //     var script = document.createElement('script');
+    //     script.type = 'text/javascript';
+    //     script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+    //         '&signed_in=true&callback=initialize';
+    //     document.body.appendChild(script);
+    //   }
 
-      window.onload = loadScript;
+    //   window.onload = loadScript;
 
-    </script>
+    // </script>
   </head>
   <body>
-    <div id="map-canvas"></div>
+    <div id="map_box">
+      <div id="map-canvas"></div>
+    </div>
+
+        <script>
+          function initialize() {
+            var mapOptions = {
+              zoom: 8,
+              center: new google.maps.LatLng(-34.397, 150.644)
+            };
+
+            var map = new google.maps.Map(document.getElementById('map-canvas'),
+                mapOptions);
+          }
+
+          function loadScript() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+                '&signed_in=true&callback=initialize';
+            document.body.appendChild(script);
+          }
+
+          window.onload = loadScript;
+
+        </script>
   </body>
 </html>
