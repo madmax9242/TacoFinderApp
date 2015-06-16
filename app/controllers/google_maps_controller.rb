@@ -1,3 +1,0 @@
-class GoogleMapsController < ApplicationController
-
-end

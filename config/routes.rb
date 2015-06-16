@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :restaurants
-  resources :google_maps
+  #resources :google_maps
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
