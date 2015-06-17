@@ -83,10 +83,10 @@ function findCoords () {
               var map = new google.maps.Map(document.getElementById('map-canvas'),
                   mapOptions);
               
-              var infowindow = new google.maps.InfoWindow({
+              var marker = new google.maps.Marker({
                 position: myLatLng,
                 map: map,
-                content: 'Found it!'
+                title: 'Found it!'
               });
           },
 
