@@ -31,7 +31,6 @@ class UsersController < ApplicationController
 
     #respond_to do |format|
       if @user.save
-        $rabbit = @user.vegetarian
         auto_login(@user)
         redirect_to(@user, notice: 'User was successfully created')
       else
