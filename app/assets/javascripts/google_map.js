@@ -1,5 +1,6 @@
 var map;
-
+var pos;
+var eatPlace;
 function initialize() {
   var mapOptions = {
     zoom: 15
@@ -10,7 +11,7 @@ function initialize() {
   // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
       var infowindow = new google.maps.InfoWindow({
         map: map,
@@ -54,6 +55,3 @@ function loadScript() {
   document.body.appendChild(script);
 }
 
-function tester() {
-  alert("JS working");
-}
