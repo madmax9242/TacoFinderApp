@@ -1,6 +1,4 @@
 var map;
-var pos;
-var eatPlace;
 
 // Finds the person's location on the map using HTML5 geolocation
 // function initialize() {
