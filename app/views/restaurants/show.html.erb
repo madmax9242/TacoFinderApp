@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Asynchronous Loading</title>
+    <title>Where is it?</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -18,7 +18,6 @@
         position: absolute;
       }
     </style>
-    <!--<script src="javascripts/google_map.js"></script>-->
 
     <%= javascript_include_tag "application" %>
 
@@ -26,9 +25,9 @@
   </head>
   <body>
   	<p id="notice"><%= notice %></p>
-    <h6 id="address" style="color:white"><%= @restaurant.address %></h6>
-<!-- 
-    <button id="findAddress">Places Nearby</button> -->
+    <h6 id="address" style="color:white"><%= @restaurant.address %></h6><br>
+    <h1 class="rest_text"><strong><%= @restaurant.name %></strong></h1>
+
 
     <div id="map_box">
       <div id="map-canvas"></div>
