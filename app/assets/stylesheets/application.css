@@ -158,6 +158,11 @@ display:block;
 width:100%;
 }
 
+h6  {
+  display: none;
+  font-size: .1px;
+}
+
 #email-subscribe .btn-subscribe
 {
 margin-top:20px;
@@ -174,6 +179,6 @@ margin-top:20px;
   margin: 0 auto;
 }
 
-#formId  {
+/*#formId  {
   color: pink;
-}
+}*/

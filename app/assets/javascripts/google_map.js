@@ -89,17 +89,22 @@ function findCoords () {
             dataType: 'json',
 
           success: function(data, textStatus, jqXHR) {
-            console.log(data)
             var longitude = data['results'][0]['geometry']['location']['lng'];
             var latitude = data['results'][0]['geometry']['location']['lat'];
-            console.log(longitude + " " + latitude);
+            var myLatLng = new google.maps.LatLng(latitude, longitude);
               var mapOptions = {
-              zoom: 8,
-              center: new google.maps.LatLng(-34.397, 150.644)
+              zoom: 15,
+              center: myLatLng
               };
 
               var map = new google.maps.Map(document.getElementById('map-canvas'),
                   mapOptions);
+              
+              var infowindow = new google.maps.InfoWindow({
+                position: myLatLng,
+                map: map,
+                content: 'Found it!'
+              });
           },
 
 
