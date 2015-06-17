@@ -26,8 +26,9 @@
   </head>
   <body>
   	<p id="notice"><%= notice %></p>
+    <section id="address"><%= @restaurant.address %></section>
 
-    <button id="findNearby">Places Nearby</button>
+    <button id="findAddress">Places Nearby</button>
 
     <div id="map_box">
       <div id="map-canvas"></div>
@@ -35,9 +36,11 @@
 
         <script>
 
-	    	window.onload = loadScript;
+          $(document).ready(function() {
+            window.onload = loadScript;
+          });
+	    	  
 
-	 		console.log(pos);
 	    </script>
   </body>
 </html>
