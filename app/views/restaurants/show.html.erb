@@ -18,7 +18,7 @@
         position: absolute;
       }
     </style>
-    <!--<script src="/assets/javascripts/google_map.js"></script> -->
+    <!--<script src="javascripts/google_map.js"></script>-->
 
     <%= javascript_include_tag "application" %>
 
@@ -27,18 +27,19 @@
   <body>
   	<p id="notice"><%= notice %></p>
     <h6 id="address" style="color:white"><%= @restaurant.address %></h6>
-
-    <button id="findAddress">Places Nearby</button>
+<!-- 
+    <button id="findAddress">Places Nearby</button> -->
 
     <div id="map_box">
       <div id="map-canvas"></div>
     </div>
 
         <script>
+            $(document).ready(function() {
+              loadScript();
+            });
+            
 
-          $(document).ready(function() {
-            window.onload = loadScript;
-          });
 	    	  
 
 	    </script>

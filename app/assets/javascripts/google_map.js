@@ -1,4 +1,4 @@
-var map;
+// var map;
 
 // Finds the person's location on the map using HTML5 geolocation
 // function initialize() {
@@ -56,31 +56,16 @@ var map;
 // }
 
 //Trying to load the map at the restaurant's geolocation
+
+var map;
+
 function initialize() {
 
   findCoords();
-  // var mapOptions = {
-  //   zoom: 8,
-  //   center: new google.maps.LatLng(-34.397, 150.644)
-  // };
 
-  // var map = new google.maps.Map(document.getElementById('map-canvas'),
-  //     mapOptions);
-
-}
-
-
-function loadScript() {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-      '&signed_in=true&callback=initialize';
-  document.body.appendChild(script);
 }
 
 function findCoords () {
-    $(document).ready(function() {
-      $('#findAddress').click(function() {
 
           $.ajax({
             url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + $('#address').text(),
@@ -91,7 +76,7 @@ function findCoords () {
             var latitude = data['results'][0]['geometry']['location']['lat'];
             var myLatLng = new google.maps.LatLng(latitude, longitude);
               var mapOptions = {
-              zoom: 15,
+              zoom: 17,
               center: myLatLng
               };
 
@@ -110,7 +95,13 @@ function findCoords () {
             alert('No maps for you');
           }
           });
-      });
-  });
+}
+
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+      '&signed_in=true&callback=initialize';
+  document.body.appendChild(script);
 }
 

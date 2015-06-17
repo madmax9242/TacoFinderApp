@@ -163,6 +163,10 @@ h6  {
   font-size: .1px;
 }
 
+#address {
+  display:none;
+}
+
 #email-subscribe .btn-subscribe
 {
 margin-top:20px;
