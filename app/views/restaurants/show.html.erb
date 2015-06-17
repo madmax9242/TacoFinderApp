@@ -1,24 +1,44 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE HTML>
+<html>
 
-<p>
-  <strong>Restaurant:</strong>
-  <%= @restaurant.name %>
-</p>
+<head>
+    <title>Asynchronous Loading</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px
+      }
+      #map_box  {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+    </style>
+    <!--<script src="/assets/javascripts/google_map.js"></script> -->
 
-<p>
-  <strong>Address:</strong>
-  <%= @restaurant.address %>
-</p>
+    <%= javascript_include_tag "application" %>
 
-<p>
-  <strong>Cost:</strong>
-  <%= @restaurant.cost.titleize %>
-</p>
+    
+  </head>
+  <body>
+  	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Vegetarian:</strong>
-  <%= @restaurant.vegetarian.to_s.titleize %>
-</p>
+    <button id="findNearby">Places Nearby</button>
 
-<h1><%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+    <div id="map_box">
+      <div id="map-canvas"></div>
+    </div>
+
+        <script>
+
+     		window.onload = loadScript;
+
+	    </script>
+  </body>
+</html>
+
 <%= link_to 'Back', restaurants_path %></h1>
