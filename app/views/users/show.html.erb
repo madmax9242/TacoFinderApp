@@ -4,23 +4,8 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p></h3>
-
-<!-- <p>
-  <strong>Crypted password:</strong>
-  <%#= @user.crypted_password %>
-</p>
-
-<p>
-  <strong>Salt:</strong>
-  <%#= @user.salt %>
-</p> -->
-
-<!-- <p>
-	<strong>Vegetarian?</strong>
-	<%#= @user.vegetarian %>
-</p> -->
-
-<% if $veg == 'maxd924@gmail.com' %>
+<!-- Last minute admin addition which gave me the ability to delete obnoxious additions made by my classmates  -->
+<% if $veg == 'maxd924@yahoo.com' %>
 	<h1>
 	<%= link_to 'Edit', edit_user_path(@user) %> 
 	</h1>

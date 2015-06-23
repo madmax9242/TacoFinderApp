@@ -3,29 +3,26 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   
 
-  # GET /users
-  # GET /users.json
+  # Shows all of the restaurants
   def index
      redirect_to :restaurants
   end
 
-  # GET /users/1
-  # GET /users/1.json
+  # Utilizes the google maps API to show where the restaurant is on the map
   def show
   end
 
-  # GET /users/new
+  # Makes a new use
   def new
     @user = User.new
   end
 
-  # GET /users/1/edit
+  # Edits users
   def edit
     @users = User.all
   end
 
-  # POST /users
-  # POST /users.json
+  # Creates/saves new user to the database
   def create
     @user = User.new(user_params)
 
@@ -39,8 +36,7 @@ class UsersController < ApplicationController
     #end
   end
 
-  # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
+  # Update user
   def update
     respond_to do |format|
       if @user.update(user_params)
@@ -53,8 +49,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # DELETE /users/1
-  # DELETE /users/1.json
+  # Deletes user
   def destroy
     @user.destroy
     respond_to do |format|

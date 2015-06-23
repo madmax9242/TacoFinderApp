@@ -15,8 +15,9 @@
             <%= restaurant.cost.titleize %><br>
             <strong>Vegetarian Friendly?</strong>
             <%= restaurant.vegetarian.to_s %><br>
-            <%= link_to 'Show', restaurant %> 
-            <% if $veg == 'maxd924@gmail.com' %>          
+            <%= link_to 'Show', restaurant %>
+            <!-- Last minute admin addition which gave me the ability to delete obnoxious additions made by my classmates  --> 
+            <% if $veg == 'maxd924@yahoo.com' %>          
                 <%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %>
             <% end %>
         </p>

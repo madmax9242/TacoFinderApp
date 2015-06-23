@@ -22,7 +22,8 @@
 @-ms-viewport{
   width: device-width;
 }
-
+/* A team member originally pulled several bootstrap templates together, so after some cleaning,
+I think that I've whittled the CSS down to just the styles that I implemented */
 .rest_text  {
   text-align: center;
   font-style: underline;
@@ -91,7 +92,6 @@ h3  {
   text-align: center;
 }
 
-/* Pulling CSS from other useless files putting relative ones in here   */
 #notice {
   color: green;
 }

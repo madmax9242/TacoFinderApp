@@ -6,6 +6,9 @@ class UserSessionsController < ApplicationController
 
   def create
     if @user = login(params[:email], params[:password])
+      # Last minute admin addition which gave me the ability 
+      # to delete obnoxious restaurant additions made by my 
+      # classmates during my presentation
       $veg = @user.email
       redirect_back_or_to('/user', notice: 'Login successful')
     else
